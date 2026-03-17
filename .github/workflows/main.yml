@@ -1,0 +1,22 @@
+name: User Dashboard CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a script
+        run: echo "Building User Dashboard..."
+
+      - name: Simple build step (example)
+        run: |
+          echo "Running build command..."
+          echo "Build successful!"
